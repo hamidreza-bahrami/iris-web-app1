@@ -3,7 +3,7 @@ import pandas as pd
 from sklearn import datasets
 from sklearn.ensemble import RandomForestClassifier
 
-st.write('مدل تشخیص گل زنبق')
+st.write('###مدل تشخیص گل زنبق')
 st.sidebar.header('پارامتر هارا وارد کنید')
 
 def user_input_features():
