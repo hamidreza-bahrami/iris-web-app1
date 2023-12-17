@@ -3,12 +3,10 @@ import pandas as pd
 from sklearn import datasets
 from sklearn.ensemble import RandomForestClassifier
 
-col1, col2, col3 = st.columns([1,1,1])
-col2.st.write("""
-# مدل تشخیص گل زنبق
-""")
 
-col2.st.sidebar.header('پارامتر هارا وارد کنید')
+st.write(<h1 style='text-align: center; color: grey;'>مدل تشخیص گل زنبق</h1>", unsafe_allow_html=True)
+
+st.sidebar.header(<h2 style='text-align: center; color: grey;'>پارامترها را وارد کنید</h2>", unsafe_allow_html=True)
 
 def user_input_features():
     sepal_length = st.sidebar.slider('طول کاسبرگ', 4.3, 7.9, 5.4)
