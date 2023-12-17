@@ -4,9 +4,8 @@ from sklearn import datasets
 from sklearn.ensemble import RandomForestClassifier
 
 
-st.write("<h1 style='text-align: center; color: grey;'>مدل تشخیص گل زنبق</h1>", unsafe_allow_html=True)
-
-st.sidebar.header("<h2 style='text-align: center; color: grey;'>پارامترها را وارد کنید</h2>", unsafe_allow_html=True)
+st.write("<h1 style='text-align: center; color: black;'>مدل تشخیص گل زنبق</h1>")
+st.sidebar.header("<h2 style='text-align: center; color: black;'>پارامترها را وارد کنید</h2>")
 
 def user_input_features():
     sepal_length = st.sidebar.slider('طول کاسبرگ', 4.3, 7.9, 5.4)
