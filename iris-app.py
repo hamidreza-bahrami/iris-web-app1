@@ -3,12 +3,8 @@ import pandas as pd
 from sklearn import datasets
 from sklearn.ensemble import RandomForestClassifier
 
-
 st.write("<h1 style='text-align: center; color: grey;'>مدل تشخیص گل زنبق</h1>", unsafe_allow_html=True)
-st.sidebar.header("<h2 style='text-align: center; color: black;'>پارامترهارا وارد کنید</h2>", unsafe_allow_html=True)
-
-st.markdown("<h2 style='text-align: center; color: black;'>Smaller headline in black </h2>", unsafe_allow_html=True)
-
+st.sidebar.header('پارامتر هارا وارد کنید')
 
 def user_input_features():
     sepal_length = st.sidebar.slider('طول کاسبرگ', 4.3, 7.9, 5.4)
@@ -24,7 +20,7 @@ def user_input_features():
 
 df = user_input_features()
 
-st.subheader('پارامترهای وارد شده')
+st.subheader("<h3 style='text-align: center; color: grey;'>\پارامتر های وارد شده</h3>", unsafe_allow_html=True)
 st.write(df)
 
 iris = datasets.load_iris()
@@ -37,13 +33,13 @@ model.fit(x, y)
 prediction = model.predict(df)
 prediction_proba = model.predict_proba(df)
 
-st.subheader('نوع گل قابل تشخیص')
+st.subheader("<h3 style='text-align: center; color: grey;'>\نوع گل قابل تشخیص</h3>", unsafe_allow_html=True)
 st.write(iris.target_names)
 
-st.subheader('تشخیص نهایی')
+st.subheader("<h3 style='text-align: center; color: grey;'>\تشخیص نهایی</h3>", unsafe_allow_html=True)
 st.write(iris.target_names[prediction])
 
-st.subheader('احتمال تشخیص این گل')
+st.subheader("<h3 style='text-align: center; color: grey;'>\احتمال پیش بینی هرکدام، بر اساس این پارامترها</h3>", unsafe_allow_html=True)
 st.write(prediction_proba)
 
 
