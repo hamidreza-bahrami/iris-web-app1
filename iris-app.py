@@ -36,13 +36,13 @@ model.fit(x, y)
 prediction = model.predict(df)
 prediction_proba = model.predict_proba(df)
 
-st.subheader('Class lables and their index number')
+st.subheader('نوع گل قابل تشخیص')
 st.write(iris.target_names)
 
-st.subheader('Prediction')
+st.subheader('تشخیص نهایی')
 st.write(iris.target_names[prediction])
 
-st.subheader('Prediction Probability')
+st.subheader('احتمال تشخیص این گل')
 st.write(prediction_proba)
 
 
