@@ -3,7 +3,7 @@ import pandas as pd
 from sklearn import datasets
 from sklearn.ensemble import RandomForestClassifier
 
-st.write("<h1 style='text-align: center; color: grey;'>مدل تشخیص گل زنبق</h1>", unsafe_allow_html=True)
+st.write('مدل تشخیص گل زنبق')
 st.sidebar.header('پارامتر هارا وارد کنید')
 
 def user_input_features():
@@ -20,7 +20,7 @@ def user_input_features():
 
 df = user_input_features()
 
-st.subheader("<h3 style='text-align: center; color: grey;'>\پارامتر های وارد شده</h3>", unsafe_allow_html=True)
+st.subheader('پارامتر های وارد شده')
 st.write(df)
 
 iris = datasets.load_iris()
@@ -33,13 +33,13 @@ model.fit(x, y)
 prediction = model.predict(df)
 prediction_proba = model.predict_proba(df)
 
-st.subheader("<h3 style='text-align: center; color: grey;'>\نوع گل قابل تشخیص</h3>", unsafe_allow_html=True)
+st.subheader('نوع گل قابل تشخیص')
 st.write(iris.target_names)
 
-st.subheader("<h3 style='text-align: center; color: grey;'>\تشخیص نهایی</h3>", unsafe_allow_html=True)
+st.subheader('تشخیص نهایی')
 st.write(iris.target_names[prediction])
 
-st.subheader("<h3 style='text-align: center; color: grey;'>\احتمال پیش بینی هرکدام، بر اساس این پارامترها</h3>", unsafe_allow_html=True)
+st.subheader('احتمال پیش بینی هر کدام بر اساس این پارامترها')
 st.write(prediction_proba)
 
 
