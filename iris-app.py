@@ -5,6 +5,8 @@ from sklearn.ensemble import RandomForestClassifier
 
 st.title('مدل تشخیص گل زنبق')
 st.sidebar.header('پارامتر هارا وارد کنید')
+st.write("<h4 style='text-align: center; color: gray;'>Robo-Ai.ir طراحی شده توسط</h4>", unsafe_allow_html=True)
+st.link_button("Robo-Ai بازگشت به", "https://robo-ai.ir")
 
 def user_input_features():
     sepal_length = st.sidebar.slider('طول کاسبرگ', 4.3, 7.9, 5.4)
