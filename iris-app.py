@@ -4,6 +4,8 @@ from sklearn import datasets
 from sklearn.ensemble import RandomForestClassifier
 import time
 
+st.set_page_config(page_title='تشخیص گیاه - RoboAi', layout='centered', page_icon='🤖')
+
 def show_page():
     st.write("<h1 style='text-align: center; color: blue;'>تشخیص نوع گل با هوش مصنوعی</h1>", unsafe_allow_html=True)
     st.write("<h4 style='text-align: center; color: gray;'>Robo-Ai.ir طراحی شده توسط</h4>", unsafe_allow_html=True)
