@@ -8,6 +8,22 @@ def show_page():
     st.write("<h1 style='text-align: center; color: blue;'>تشخیص نوع گل با هوش مصنوعی</h1>", unsafe_allow_html=True)
     st.write("<h4 style='text-align: center; color: gray;'>Robo-Ai.ir طراحی شده توسط</h4>", unsafe_allow_html=True)
     st.link_button("Robo-Ai بازگشت به", "https://robo-ai.ir")
+    
+    with st.sidebar:
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            st.write(' ')
+        with col2:
+            st.image('img.png')
+        with col3:
+            st.write(' ')
+        
+        st.divider()
+        st.write("<h4 style='text-align: right; color: gray;'>تشخیص نوع گل بر اساس ابعاد با دقت 98 درصد</h>", unsafe_allow_html=True)
+        st.write("<h4 style='text-align: right; color: gray;'>ساخته شده با مختصات 150 شاخه گل زنبق</h>", unsafe_allow_html=True)
+        st.divider()
+        st.write('Developed & Designed by')
+        st.write('Hamidreza Bahrami')
 
     def user_input_features():
         sepal_length = st.slider('طول کاسبرگ', 4.3, 7.9, 5.4)
@@ -52,4 +68,5 @@ def show_page():
             st.write("<h4 style='text-align: right; color: gray;'>بر اساس تحلیل من نوع گل زنبق وارد شده ، گل ویرجینیکا است</h4>", unsafe_allow_html=True)
             st.write("<h4 style='text-align: left; color: gray;'>Based on my analysis, this dimension belong to Virginica</h4>", unsafe_allow_html=True)
             st.image('virginica.jpg')
+
 show_page()
