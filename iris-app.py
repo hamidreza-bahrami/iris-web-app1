@@ -44,12 +44,12 @@ def show_page():
             st.image('setosa.jpg')
 
         elif prediction == 1:
-            st.write("<h4 style='text-align: right; color: gray;'>بر اساس تحلیل من نوع گل زنبق وارد شده ، نوع گل ورسیکالر است</h4>", unsafe_allow_html=True)
+            st.write("<h4 style='text-align: right; color: gray;'>بر اساس تحلیل من نوع گل زنبق وارد شده ، گل ورسیکالر است</h4>", unsafe_allow_html=True)
             st.write("<h4 style='text-align: left; color: gray;'>Based on my analysis, this dimension belong to Versicolor</h4>", unsafe_allow_html=True)
             st.image('versicolor.jpeg')
 
         else:
-            st.write("<h4 style='text-align: right; color: gray;'>بر اساس تحلیل من نوع گل زنبق وارد شده ، نوع گل ویرجینیکا است</h4>", unsafe_allow_html=True)
+            st.write("<h4 style='text-align: right; color: gray;'>بر اساس تحلیل من نوع گل زنبق وارد شده ، گل ویرجینیکا است</h4>", unsafe_allow_html=True)
             st.write("<h4 style='text-align: left; color: gray;'>Based on my analysis, this dimension belong to Virginica</h4>", unsafe_allow_html=True)
             st.image('virginica.jpg')
 show_page()
