@@ -39,6 +39,11 @@ def show_page():
 
     df = user_input_features()
 
+    def stream_data():
+        for word in text3.split(" "):
+            yield word + " "
+            time.sleep(0.05)
+
     iris = datasets.load_iris()
     x = iris.data
     y = iris.target
@@ -55,18 +60,48 @@ def show_page():
         prediction = model.predict(df)
         prediction_proba = model.predict_proba(df)
         if prediction == 0:
-            st.write("<h4 style='text-align: right; color: gray;'>بر اساس تحلیل من نوع گل زنبق وارد شده ، ستوسا است</h4>", unsafe_allow_html=True)
-            st.write("<h4 style='text-align: left; color: gray;'>Based on my analysis, this dimension belong to Setosa</h4>", unsafe_allow_html=True)
+            text1 = 'بر اساس تحلیل من نوع گل زنبق وارد شده ، ستوسا است'
+            text2 = 'Based on my analysis, this dimension belong to Setosa'
+            def stream_data1():
+                for word in text1.split(" "):
+                    yield word + " "
+                    time.sleep(0.09)
+            st.write_stream(stream_data1)
+            def stream_data2():
+                for word in text2.split(" "):
+                    yield word + " "
+                    time.sleep(0.09)
+            st.write_stream(stream_data2)
             st.image('setosa.jpg')
 
         elif prediction == 1:
-            st.write("<h4 style='text-align: right; color: gray;'>بر اساس تحلیل من نوع گل زنبق وارد شده ، گل ورسیکالر است</h4>", unsafe_allow_html=True)
-            st.write("<h4 style='text-align: left; color: gray;'>Based on my analysis, this dimension belong to Versicolor</h4>", unsafe_allow_html=True)
+            text1 = 'بر اساس تحلیل من نوع گل زنبق وارد شده ، گل ورسیکالر است'
+            text2 = 'Based on my analysis, this dimension belong to Versicolor'
+            def stream_data1():
+                for word in text1.split(" "):
+                    yield word + " "
+                    time.sleep(0.09)
+            st.write_stream(stream_data1)
+            def stream_data2():
+                for word in text2.split(" "):
+                    yield word + " "
+                    time.sleep(0.09)
+            st.write_stream(stream_data2)
             st.image('versicolor.jpeg')
 
         else:
-            st.write("<h4 style='text-align: right; color: gray;'>بر اساس تحلیل من نوع گل زنبق وارد شده ، گل ویرجینیکا است</h4>", unsafe_allow_html=True)
-            st.write("<h4 style='text-align: left; color: gray;'>Based on my analysis, this dimension belong to Virginica</h4>", unsafe_allow_html=True)
+            text1 = 'بر اساس تحلیل من نوع گل زنبق وارد شده ، گل ویرجینیکا است'  
+            text2 = 'Based on my analysis, this dimension belong to Virginica'
+            def stream_data1():
+                for word in text1.split(" "):
+                    yield word + " "
+                    time.sleep(0.09)
+            st.write_stream(stream_data1)
+            def stream_data2():
+                for word in text2.split(" "):
+                    yield word + " "
+                    time.sleep(0.09)
+            st.write_stream(stream_data2)
             st.image('virginica.jpg')
-
+            
 show_page()
