@@ -4,28 +4,19 @@ from sklearn import datasets
 from sklearn.ensemble import RandomForestClassifier
 import time
 
-st.set_page_config(page_title='تشخیص گیاه - RoboAi', layout='centered', page_icon='🤖')
+st.set_page_config(page_title='تشخیص گیاه - RoboAi', layout='centered', page_icon='🌺')
 
 def show_page():
-    st.write("<h1 style='text-align: center; color: blue;'>تشخیص نوع گل با هوش مصنوعی</h1>", unsafe_allow_html=True)
-    st.write("<h4 style='text-align: center; color: gray;'>Robo-Ai.ir طراحی شده توسط</h4>", unsafe_allow_html=True)
-    st.link_button("Robo-Ai بازگشت به", "https://robo-ai.ir")
-    
+    st.write("<h3 style='text-align: center; color: gold;'>سامانه تشخیص نوع گل با هوش مصنوعی 🌺</h3>", unsafe_allow_html=True)
+    st.write("<h6 style='text-align: center; color: white;'>RoboAi طراحی شده توسط</h6>", unsafe_allow_html=True)
+    st.link_button("Robo-Ai.ir بازگشت به", "https://robo-ai.ir")
     with st.sidebar:
         col1, col2, col3 = st.columns(3)
-        with col1:
-            st.write(' ')
-        with col2:
-            st.image('img.png')
-        with col3:
-            st.write(' ')
-        
+        st.write("<h4 style='text-align: center; color: white;'>تشخیص نوع گل</h4>", unsafe_allow_html=True)
+        st.write("<h4 style='text-align: center; color: white;'>با تحلیل ابعاد گل</h4>", unsafe_allow_html=True)
         st.divider()
-        st.write("<h4 style='text-align: right; color: gray;'>تشخیص نوع گل بر اساس ابعاد با دقت 98 درصد</h>", unsafe_allow_html=True)
-        st.write("<h4 style='text-align: right; color: gray;'>ساخته شده با مختصات 150 شاخه گل زنبق</h>", unsafe_allow_html=True)
-        st.divider()
-        st.write('Developed & Designed by')
-        st.write('Hamidreza Bahrami')
+        st.write("<h5 style='text-align: center; color: white;'>طراحی و توسعه</h5>", unsafe_allow_html=True)
+        st.write("<h5 style='text-align: center; color: white;'>حمیدرضا بهرامی</h5>", unsafe_allow_html=True)
 
     def user_input_features():
         sepal_length = st.slider('طول کاسبرگ', 4.3, 7.9, 5.4)
